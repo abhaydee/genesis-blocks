@@ -1,8 +1,6 @@
 
 # Genesis Blocks 🚀
 
-![Genesis Blocks Logo]
-
 *No-code platform for Stacks & Bitcoin! Bringing blockchain to everyone, even your grandma.*
 
 ## Overview
