@@ -11,6 +11,8 @@ import { ArrowLeft, Blocks as BlocksIcon, Loader2 } from 'lucide-react';
 import { AppConfig, UserSession, showConnect, openContractDeploy } from '@stacks/connect';
 import { sonner as toast } from 'sonner';
 import { AnchorMode, PostConditionMode } from '@stacks/transactions';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const contractName = 'token-swap';
 const contractCode = `;; Define the contract's data variables
@@ -164,14 +166,6 @@ const contractCode = `;; Define the contract's data variables
     )
 )`;
 
-
-const nodeTypes = {
-    // Define your custom node types here
-};
-
-const edgeTypes = {
-    // Define your custom edge types here
-};
 
 const CompilePage: React.FC = () => {
     const searchParams = useSearchParams();
@@ -358,9 +352,20 @@ const CompilePage: React.FC = () => {
                     <div className="bg-gradient-to-br from-[#322131] to-[#21173E] p-6 rounded-xl border border-[#FB118E]/20 shadow-lg h-full">
                         <h2 className="text-2xl font-bold text-[#FB118E] mb-6">Contract Code</h2>
                         <div className="overflow-auto max-h-[calc(100vh-300px)] rounded-lg bg-black/20 border border-[#FB118E]/10">
-                            <pre className="p-6 text-sm text-white/80 font-mono whitespace-pre-wrap">
+                            <SyntaxHighlighter
+                                language="lisp"
+                                style={vscDarkPlus}
+                                customStyle={{
+                                    background: 'transparent',
+                                    padding: '1.5rem',
+                                    margin: 0,
+                                    fontSize: '0.875rem',
+                                }}
+                                wrapLines={true}
+                                showLineNumbers={true}
+                            >
                                 {contractCode}
-                            </pre>
+                            </SyntaxHighlighter>
                         </div>
 
                         {apiResponse && (

@@ -40,6 +40,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.1",
+    "react-syntax-highlighter": "^15.6.1",
     "reactflow": "^11.11.4",
     "slither-js": "^0.8.0",
     "solc": "^0.8.28",
