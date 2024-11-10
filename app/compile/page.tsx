@@ -257,7 +257,7 @@ const CompilePage: React.FC = () => {
 
         try {
             await openContractDeploy({
-                contractName: 'stx-defi',
+                contractName: 'stx-lend',
                 codeBody: contractCode,
                 network: 'testnet',
                 anchorMode: AnchorMode.Any,

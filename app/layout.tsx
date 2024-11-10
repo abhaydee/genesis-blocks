@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
@@ -12,8 +11,11 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Building Blocks",
-  description: "Create Automated Smart Contracts and AI agents on-chain",
+  title: "Genesis Blocks",
+  icons: {
+    icon: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
 };
 
 
